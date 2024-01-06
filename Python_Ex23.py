@@ -69,7 +69,7 @@ def main(self):
     dp = updater.dispatcher
     bot_handler=TelegramBotHandler()
     dp.add_handler(CommandHandler("start", bot_handler.start))
-    dp.add_handler(MessageHandler(Filters.text, bot_handler.handle_message))
+    dp.add_handler(MessageHandler(filters.text, bot_handler.handle_message))
     updater.start_polling()
     updater.idle()   
 
